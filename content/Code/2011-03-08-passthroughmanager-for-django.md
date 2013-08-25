@@ -1,5 +1,6 @@
 Title: PassThroughManager for Django
 Tags: python, django
+Alias: post/3717466639/passthroughmanager-for-django/index.html
 
 **Update 3/30/2011:** This has been merged into [Django-model-utils](https://bitbucket.org/carljm/django-model-utils/) (Thanks to [Carl Meyer](https://bitbucket.org/carljm)). There is a ton of useful stuff in that package. You should really be using it. I am.
 
@@ -12,7 +13,7 @@ To solve this problem I wrote a class called **PassThroughManager**. If you have
     class PostQuerySet(QuerySet):
         def enabled(self):
             return self.filter(disabled=False)
-    
+
     class Post(models.Model):
         objects = PassThroughManager(PostQuerySet)
 

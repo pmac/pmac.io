@@ -1,5 +1,6 @@
 Title: Cookies for Django
 Tags: python, django
+Alias: post/1660050353/cookies-for-django/index.html
 
 Until yesterday I thought the new [messages framework in Django 1.2](http://docs.djangoproject.com/en/1.2/ref/contrib/messages/) was doing things stupidly. I like the [Fallback backend](http://docs.djangoproject.com/en/1.2/ref/contrib/messages/#storage-backends); it uses signed cookies to store the messages that will be displayed to the user. This avoids the DB or cache hits that'd you'd normally get from the old system, as well as those you'd get from using the session for message storage. The Fallback goes further and will use the session if your message is too big for a cookie. Awesome right? My problem was that the messages weren't showing up on the page until the request AFTER the one in which I set the message. I could see nothing I'd done wrong at the time, so I assumed that it was just the way it worked w/ cookies, b/c cookies have to be set in the browser and are only sent back to the server on subsequent requests.
 
