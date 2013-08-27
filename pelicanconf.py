@@ -6,19 +6,19 @@ AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
 SITEURL = ''
 
+MD_EXTENSIONS = ['codehilite', 'extra']
+THEME = 'themes/sundown'
+
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
-PLUGINS = ['content_aliases']
+PLUGINS = ['content_aliases', 'assets']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
-
-GITHUB_URL = 'https://github.com/pmclanahan/'
-#TWITTER_USERNAME = 'pmclanahan'
 
 # Blogroll
 LINKS =  (
@@ -27,10 +27,11 @@ LINKS =  (
     ('Jinja2', 'http://jinja.pocoo.org/'),
 )
 
-# Social widget
+TWITTER_USERNAME = 'pmclanahan'
+GITHUB_URL = 'https://github.com/pmclanahan/'
 SOCIAL = (
-    ('Github', GITHUB_URL),
-    ('Twitter', 'http://twitter.com/pmclanahan'),
+    ('github', GITHUB_URL),
+    ('twitter', 'https://twitter.com/pmclanahan'),
 )
 
 DEFAULT_PAGINATION = 10
@@ -50,3 +51,4 @@ CATEGORY_URL = 'category/{slug}/'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
+ARCHIVES_SAVE_AS = 'archives/index.html'

@@ -10,6 +10,7 @@ I found a project that helps with this. [Django-model-utils](https://bitbucket.o
 
 To solve this problem I wrote a class called **PassThroughManager**. If you have a simple set of methods you want to exist on a manager and queryset, you can do the following:
 
+    #!python
     class PostQuerySet(QuerySet):
         def enabled(self):
             return self.filter(disabled=False)
@@ -17,6 +18,43 @@ To solve this problem I wrote a class called **PassThroughManager**. If you have
     class Post(models.Model):
         objects = PassThroughManager(PostQuerySet)
 
-You'd then be able to use both **Post.objects.enabled()** and **Post.objects.filter(other='stuff').enabled()**. If you had other methods you wanted to add to your manager but not your queryset, just subclass PassThroughManager and you can do anything you want. This method has the advantage of maintaining picklability, and is a bit more readable in my opinion. Grab the code and try it for yourself in the Gist below. Feedback is most welcome and encouraged.
+You'd then be able to use both **Post.objects.enabled()** and **Post.objects.filter(other='stuff').enabled()**. If you had other methods you wanted to add to your manager but not your queryset, just subclass PassThroughManager and you can do anything you want. This method has the advantage of maintaining picklability, and is a bit more readable in my opinion. [Grab the code and try it for yourself](https://gist.github.com/pmclanahan/859473). Feedback is most welcome and encouraged.
 
-<script src="https://gist.github.com/859473.js"></script>
+    #!python
+    from django.db.models.manager import Manager
+
+
+    class PassThroughManager(Manager):
+        '''
+        Inherit from this Manager to enable you to call any methods from your
+        custom QuerySet class from your manager. Simply define your QuerySet
+        class, and return an instance of it from your manager's `get_query_set`
+        method.
+
+        Alternately, if you don't need any extra methods on your manager that
+        aren't on your QuerySet, then just pass your QuerySet class to this
+        class' constructer.
+
+        class PostQuerySet(QuerySet):
+            def enabled(self):
+                return self.filter(disabled=False)
+
+        class Post(models.Model):
+            objects = PassThroughManager(PostQuerySet)
+        '''
+        # pickling causes recursion errors
+        _deny_methods = ['__getstate__', '__setstate__']
+
+        def __init__(self, queryset_cls=None):
+            self._queryset_cls = queryset_cls
+            super(PassThroughManager, self).__init__()
+
+        def __getattr__(self, name):
+            if name in self._deny_methods:
+                raise AttributeError(name)
+            return getattr(self.get_query_set(), name)
+
+        def get_query_set(self):
+            if self._queryset_cls is not None:
+                return self._queryset_cls(self.model, using=self._db)
+            return super(PassThroughManager, self).get_query_set()
