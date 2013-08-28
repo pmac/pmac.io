@@ -27,7 +27,7 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/pmclanahan'),
 )
 
-DEFAULT_PAGINATION = 3
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
