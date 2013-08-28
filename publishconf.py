@@ -14,13 +14,10 @@ SITEURL = 'http://pmclanahan.github.io'
 RELATIVE_URLS = False
 
 FEED_DOMAIN = SITEURL
-FEED_ALL_ATOM = 'feed/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feed/category/%s.atom.xml'
-TAG_FEED_ATOM = 'feed/tag/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-170744-4"

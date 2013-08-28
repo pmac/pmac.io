@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
+SITESUBTITLE = u'a complete waste of time'
 SITEURL = ''
 
 MD_EXTENSIONS = ['codehilite', 'extra']
@@ -15,17 +16,9 @@ DEFAULT_LANG = u'en'
 
 PLUGINS = ['content_aliases', 'assets']
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-
-# Blogroll
-LINKS =  (
-    ('Pelican', 'http://getpelican.com/'),
-    ('Python.org', 'http://python.org/'),
-    ('Jinja2', 'http://jinja.pocoo.org/'),
-)
+FEED_ALL_ATOM = 'feed/all.xml'
+CATEGORY_FEED_ATOM = 'feed/category/%s.xml'
+TAG_FEED_ATOM = 'feed/tag/%s.xml'
 
 TWITTER_USERNAME = 'pmclanahan'
 GITHUB_URL = 'https://github.com/pmclanahan/'
@@ -34,10 +27,10 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/pmclanahan'),
 )
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 3
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
