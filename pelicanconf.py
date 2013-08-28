@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
-SITESUBTITLE = u'a complete waste of time'
+SITESUBTITLE = u'a mozillian on a mission'
 SITEURL = ''
 
 MD_EXTENSIONS = ['codehilite', 'extra']
