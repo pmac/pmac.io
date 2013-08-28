@@ -16,9 +16,10 @@ DEFAULT_LANG = u'en'
 
 PLUGINS = ['content_aliases', 'assets']
 
-FEED_ALL_ATOM = 'feed/all.xml'
-CATEGORY_FEED_ATOM = 'feed/category/%s.xml'
-TAG_FEED_ATOM = 'feed/tag/%s.xml'
+FEED_ATOM = 'feed.xml'
+CATEGORY_FEED_ATOM = 'category/%s/feed.xml'
+TAG_FEED_ATOM = 'tag/%s/feed.xml'
+FEED_ALL_ATOM = TRANSLATION_FEED_ATOM = None
 
 TWITTER_USERNAME = 'pmclanahan'
 GITHUB_URL = 'https://github.com/pmclanahan/'
