@@ -30,6 +30,10 @@ FILES_TO_COPY = (
     ('extra/CNAME', 'CNAME'),
 )
 
+TEMPLATE_PAGES = {
+    'extra/404.html': '404.html',
+}
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
