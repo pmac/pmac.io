@@ -26,6 +26,9 @@ SOCIAL = (
     ('github', GITHUB_URL),
     ('twitter', 'https://twitter.com/pmclanahan'),
 )
+FILES_TO_COPY = (
+    ('extra/CNAME', 'CNAME'),
+)
 
 DEFAULT_PAGINATION = 10
 
