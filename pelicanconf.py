@@ -22,7 +22,7 @@ TAG_FEED_ATOM = 'tag/%s/feed.xml'
 FEED_ALL_ATOM = TRANSLATION_FEED_ATOM = None
 
 TWITTER_USERNAME = 'pmclanahan'
-GITHUB_URL = 'https://github.com/pmclanahan/'
+GITHUB_URL = 'https://github.com/pmclanahan'
 SOCIAL = (
     ('github', GITHUB_URL),
     ('twitter', 'https://twitter.com/pmclanahan'),
