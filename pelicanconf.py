@@ -14,7 +14,7 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
-PLUGINS = ['content_aliases', 'assets']
+PLUGINS = ['pelican_alias', 'assets']
 
 FEED_ATOM = 'feed.xml'
 CATEGORY_FEED_ATOM = 'category/%s/feed.xml'

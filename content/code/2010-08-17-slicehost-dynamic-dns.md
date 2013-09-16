@@ -1,6 +1,6 @@
 Title: Slicehost Dynamic DNS
 Tags: python, slicehost, dns
-Alias: post/967252453/slicehost-dynamic-dns/index.html
+Alias: post/967252453/slicehost-dynamic-dns/
 
 One of the best things about [Slicehost](http://slicehost.net) is their DNS service. They allow you to host and easily maintain any number of zones you want, even ones that aren't hosted on a slice. They also provide an excellent RESTful API for automatically modifying these zones and records. This came to mind recently when my free Dynamic DNS host ([EveryDNS](http://everydns.net)) was sold to [Dyn, Inc.](http://dyn.com/). I decided it was time to grow up and move my dynamic DNS needs to a service for which I was paying. I looked into Dyn's offerings, but their Custom DNS service is only for a single domain, and seems pricey for what you get. I know a lot of that has to do with their global distribution and uptime guarantees, but I don't need that stuff.
 
