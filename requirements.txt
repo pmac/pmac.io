@@ -1,0 +1,7 @@
+Markdown==2.3.1
+ghp-import==0.2.3
+pelican==3.2.2
+pelican-alias==1.0
+pelican-gist==0.2.0
+typogrify==2.0.0
+webassets==0.8

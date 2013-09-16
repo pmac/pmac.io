@@ -6,7 +6,7 @@ In which I keep my TODOs and DONEs for work.
 
 ## TODO
 
-* Watch [https://air.mozilla.org/intern-presentations-reis/]
+* Watch <https://air.mozilla.org/intern-presentations-reis/>
 
 ## DONE
 
