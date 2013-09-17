@@ -5,3 +5,4 @@ pelican-alias==1.0
 pelican-gist==0.2.0
 typogrify==2.0.0
 webassets==0.8
+pelican-link-bugs==0.1
