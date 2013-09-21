@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if articles %}
+    {% for article in articles_page.object_list %}
+      <div class="front-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></div>
+      {% include 'article_infos.html' %}
+      {{ article.summary }}
+      <div class="read-more"><a href="{{ SITEURL }}/{{ article.url }}">read more...</a></div>
+      <hr />
+    {% endfor %}
+
+    {# pagination if necessary #}
+    {% if articles_page.has_next() or articles_page.has_previous() %}
+      {% include 'pagination.html' %}
+    {% endif %}
+
+    <div class="list-footer">
+      {% block feed_link %}
+        <a class="feed-link" href="{{ SITEURL }}/{{ FEED_ATOM }}" title="ATOM Feed"><i class="icon-rss-sign icon-2x"></i></a>
+      {% endblock %}
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block title %}Blog{% endblock %}

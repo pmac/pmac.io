@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
+{% block content %}
+<section id="content" class="body">
+  <article>
+    <div class="article-title">
+      {% if TWITTER_USERNAME -%}
+        <a title="Share on Twitter" class="tweetme pull-right" href="https://twitter.com/home?status={{ article.title|striptags }} by @{{ TWITTER_USERNAME }} {{ SITEURL }}/{{ article.url }}"><i class="icon-twitter-sign"></i></a>
+      {% endif %}
+      {{ article.title }}
+    </div>
+
+    <div class="entry-content">
+      {% include 'article_infos.html' %}
+      {{ article.content }}
+      {% include 'twitter.html' %}
+    </div><!-- /.entry-content -->
+  </article>
+</section>
+{% endblock %}

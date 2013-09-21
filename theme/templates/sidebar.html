@@ -1,0 +1,25 @@
+{% macro social(name, url, title) %}
+  <a href="{{ url }}" title="{{ title }}"><i class="icon-{{ name }} icon-2x"></i></a>
+{% endmacro %}
+
+<p>
+  {% for page in PAGES %}
+    <div class="view"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></div>
+  {% endfor %}
+  <div class="view"><a href="{{ SITEURL }}/archives/">Archives</a></div>
+</p>
+
+<p>
+  {% for tag, articles in tags|sort %}
+    <div class="view"><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a></div>
+  {% endfor %}
+</p>
+
+<!-- Social links -->
+<div class="social">
+  <ul>
+    <li>{{ social('github', 'https://github.com/pmclanahan/', 'Fork me') }}</li>
+    <li>{{ social('twitter', 'https://twitter.com/pmclanahan', 'Tweet me') }}</li>
+    <li>{{ social('rss', SITEURL + '/' + FEED_ATOM, 'Feed me') }}</li>
+  </ul>
+</div>

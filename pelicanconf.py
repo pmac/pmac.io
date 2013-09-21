@@ -8,7 +8,7 @@ SITESUBTITLE = u'a mozillian on a mission'
 SITEURL = ''
 
 MD_EXTENSIONS = ['codehilite', 'extra']
-THEME = 'themes/sundown'
+THEME = 'theme'
 
 TIMEZONE = 'America/New_York'
 

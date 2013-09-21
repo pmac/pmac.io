@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>{% block title %}{% endblock %} - {{ SITENAME }}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+    {% if GITHUB_URL %}
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/gh-fork-ribbon.css">
+      <!--[if IE]>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/gh-fork-ribbon.ie.css">
+      <![endif]-->
+    {% endif %}
+    <link href="{{ SITEURL }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed">
+    {% block extra_head %}{% endblock %}
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% include 'analytics.html' %}
+  </head>
+  <body>
+    {% if GITHUB_URL %}
+      <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+          <a href="{{ GITHUB_URL }}">Fork me on GitHub <i class="icon-github"></i></a>
+        </div>
+      </div>
+    {% endif %}
+    <div class="wrapper">
+      <header>
+        <div class="title"><a href="{{ SITEURL }}/">{{ SITENAME }} </a></div>
+        <div class="sub-title">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
+
+        {% include "sidebar.html" %}
+
+      </header>
+      <section>
+      {% block content %}{% endblock %}
+      </section>
+      <footer>
+        <p><small>Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Powered by <a href="http://www.python.org">Pythons</a> and <a href="http://getpelican.com">Pelicans</a></small></p>
+        <p><small>&copy; {{ SITENAME }} &mdash; <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" id="cc-license-image" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png"></a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/jquery.timeago.js"></script>
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+
+      $(function(){
+        $('.tweetme').click(function(e) {
+          var width = 575;
+          var height = 400;
+          var left = ($(window).width()  - width)  / 2;
+          var top = ($(window).height() - height) / 2;
+          var url = this.href;
+          var opts = [
+            'status=1',
+            ',width=', width,
+            ',height=', height,
+            ',top=', top,
+            ',left=', left
+          ].join('');
+
+          window.open(url, 'tweet', opts);
+
+          return false;
+        });
+        $('time.timeago').timeago();
+      });
+    </script>
+  </body>
+</html>
