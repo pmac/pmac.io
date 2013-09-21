@@ -5,7 +5,7 @@
   <article>
     <div class="article-title">
       {% if TWITTER_USERNAME -%}
-        <a title="Share on Twitter" class="tweetme pull-right" href="https://twitter.com/home?status={{ article.title|striptags }} by @{{ TWITTER_USERNAME }} {{ SITEURL }}/{{ article.url }}"><i class="icon-twitter-sign"></i></a>
+        <a title="Share on Twitter" class="tweetme pull-right" href="https://twitter.com/home?status={{ article.title|striptags }} by @{{ TWITTER_USERNAME }} {{ SITEURL }}/{{ article.url }}"><i class="icon-share"></i></a>
       {% endif %}
       {{ article.title }}
     </div>
