@@ -1,7 +1,10 @@
 title: Pythons, Pelicans, and Posts
 tags: python, blog, pelican, release
+image: /images/pelicans.jpg
+image_alt: Pelicans!
+image_credit_url: http://www.flickr.com/photos/bertknot/8121224533
+image_credit: Photo by bertknot.
 
-<img src="|filename|/images/pelicans.jpg" style="float:left;" alt="Pelicans!">
 As most web developers are want to do more often than most,
 I've changed the tech underlying my blog. My first blog was
 a custom PHP beast completely hand-written by me and found at
@@ -79,4 +82,3 @@ regular expressions) to add your own search-and-replace-with-link patterns.
 So there you have it. The blog is moved, the code is new, and the first new post is
 all about all of that. If you got this far I'm quite impressed. Thanks for taking the time.
 
-[Pelican photo](http://www.flickr.com/photos/bertknot/8121224533) by Flickr user bertknot.

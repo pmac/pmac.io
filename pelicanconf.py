@@ -6,6 +6,7 @@ AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
 SITESUBTITLE = u'a mozillian on a mission'
 SITEURL = ''
+STATIC_URL = '/static'
 
 MD_EXTENSIONS = ['codehilite', 'extra']
 THEME = 'theme'

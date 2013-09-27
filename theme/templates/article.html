@@ -12,6 +12,14 @@
 
     <div class="entry-content">
       {% include 'article_infos.html' %}
+      {% if article.image %}
+        <div class="entry-image pull-right">
+          <img src="{{ SITEURL + STATIC_URL }}{{ article.image }}" alt="{{ article.image_alt }}">
+          {% if article.image_credit %}
+            <p class="entry-image-credit"><a href="{{ article.image_credit_url }}">{{ article.image_credit }}</a></p>
+          {% endif %}
+        </div>
+      {% endif %}
       {{ article.content }}
       {% include 'twitter.html' %}
     </div><!-- /.entry-content -->
