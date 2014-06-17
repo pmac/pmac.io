@@ -2,6 +2,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import sys
+
+from pathlib import Path
+
+
+BASE_PATH = Path(__file__).resolve().parent
+PLUGINS_PATH = BASE_PATH / 'pelican-plugins'
+sys.path.append(str(PLUGINS_PATH))
+
 AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
 SITESUBTITLE = u'on webdev, mozilla, and stuff'
@@ -32,9 +41,6 @@ SOCIAL = (
     ('github', GITHUB_URL),
     ('twitter', 'https://twitter.com/pmclanahan'),
 )
-FILES_TO_COPY = (
-    ('extra/CNAME', 'CNAME'),
-)
 
 TEMPLATE_PAGES = {
     'extra/404.html': '404.html',
@@ -58,3 +64,4 @@ CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 ARCHIVES_SAVE_AS = 'archives/index.html'
+ARTICLE_EXCLUDES = ('pages', 'extra')
