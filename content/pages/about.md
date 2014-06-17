@@ -24,4 +24,4 @@ Thanks again for reading.
 
 --pmac
 
-[code]: https://github.com/pmclanahan/pmclanahan.github.io
+[code]: https://github.com/pmclanahan/pmac.io
