@@ -67,6 +67,10 @@ stopserver:
 	kill -9 `cat srv.pid`
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
+compress_images:
+	find $(OUTPUTDIR) -name '*.jpg' -exec jpegoptim --strip-all -m80 {} \;
+	find $(OUTPUTDIR) -name '*.png' -exec optipng -o5 {} \;
+
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
@@ -82,11 +86,11 @@ dropbox_upload: publish
 ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
-s3_upload: publish
-	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
+s3_upload: publish compress_images
+	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) -M --cf-invalidate --cf-invalidate-default-index --acl-public --delete-removed
 
 github: publish
 	ghp-import $(OUTPUTDIR) -b master -m 'Update blog.'
 	git push origin master
 
-.PHONY: html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
+.PHONY: html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github compress_images
