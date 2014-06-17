@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
-SITESUBTITLE = u'a mozillian on a mission'
+SITESUBTITLE = u'on webdev, mozilla, and stuff'
 SITEURL = ''
 STATIC_URL = '/static'
 
