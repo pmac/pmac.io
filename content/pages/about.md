@@ -12,7 +12,7 @@ As for me, I'm a husband and father primarily. To support those persuits I work 
 
 Who knows what the word "[colophon](http://en.wikipedia.org/wiki/Colophon_%28publishing%29)" even means‽ I guess we do now, but still. Sites seem to have them now, so here's mine.
 
-This site is very generously hosted (for free) by [Github](https://github.com) (thanks Github!). I use [Pelican](http://getpelican.com) to generate it from [Markdown](http://daringfireball.net/projects/markdown/) and [reStructured Text](http://docutils.sourceforge.net/rst.html) files. [The code for the site][code] is open and available for your perusal and/or help (PRs welcome ;). Pelican itself is powered by [Python](http://python.org); a beautiful and powerful programming language, and the one I use most in my work.
+This site is hosted on [AWS](http://aws.amazon.com/) using S3 and Cloudfront. I use [Pelican](http://getpelican.com) to generate it from [Markdown](http://daringfireball.net/projects/markdown/) and [reStructured Text](http://docutils.sourceforge.net/rst.html) files. [The code for the site][code] is open and available for your perusal and/or help (PRs welcome ;). Pelican itself is powered by [Python](http://python.org); a beautiful and powerful programming language, and the one I use most in my work.
 
 The theme for the site is based on [Sundown for Pelican](https://github.com/keningle/pelican-sundown). I've integrated [Font Awesome](http://fontawesome.io/) for all the fancy icons that magically match my color scheme.
 
