@@ -2,14 +2,6 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-import sys
-
-from pathlib import Path
-
-
-BASE_PATH = Path(__file__).resolve().parent
-PLUGINS_PATH = BASE_PATH / 'pelican-plugins'
-sys.path.append(str(PLUGINS_PATH))
 
 AUTHOR = u'Paul McLanahan'
 SITENAME = u'Paul McLanahan'
@@ -23,9 +15,11 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
+PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = [
     'pelican_alias',
     'pelican_bugs',
+    'optimize_images',
     'assets',
 ]
 
@@ -64,3 +58,16 @@ TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 ARCHIVES_SAVE_AS = 'archives/index.html'
 ARTICLE_EXCLUDES = ('pages', 'extra')
+
+# Static Media
+ASSET_BUNDLES = (
+    ('base-css',
+     ['css/main.css', 'css/pygment.css', 'css/font-awesome.css',
+      'css/gh-fork-ribbon.css'],
+     {'output': 'CACHE/base-css.%(version)s.css',
+      'filters': 'cssmin'}),
+    ('base-js',
+     ['js/jquery-2.1.1.js', 'js/jquery.timeago.js', 'js/site.js'],
+     {'output': 'CACHE/base-js.%(version)s.js',
+      'filters': 'rjsmin'})
+)

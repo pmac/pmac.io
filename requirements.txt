@@ -19,3 +19,5 @@ six==1.7.2
 smartypants==1.8.3
 typogrify==2.0.0
 webassets==0.8
+cssmin==0.2.0
+python-magic==0.4.6
