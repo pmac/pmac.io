@@ -7,8 +7,15 @@ from __future__ import unicode_literals
 
 import os
 import sys
+
+from webassets.filter import register_filter
 sys.path.append(os.curdir)
 from pelicanconf import *
+
+from asset_filters import BetterGZip
+
+
+register_filter(BetterGZip)
 
 SITEURL = 'http://pmac.io'
 RELATIVE_URLS = False
@@ -21,3 +28,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-170744-4"
+
+# add gzip
+for bundle in ASSET_BUNDLES:
+    bundle[2]['filters'].append('better_gzip')

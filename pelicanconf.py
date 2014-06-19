@@ -62,12 +62,18 @@ ARTICLE_EXCLUDES = ('pages', 'extra')
 # Static Media
 ASSET_BUNDLES = (
     ('base-css',
-     ['css/main.css', 'css/pygment.css', 'css/font-awesome.css',
-      'css/gh-fork-ribbon.css'],
+     ['css/main.css',
+      'css/pygment.css',
+      'css/font-awesome.css',
+      'css/gh-fork-ribbon.css',
+      'css/responsive-nav.css'],
      {'output': 'CACHE/base-css.%(version)s.css',
-      'filters': 'cssmin,gzip'}),
+      'filters': ['cssmin']}),
     ('base-js',
-     ['js/jquery-2.1.1.js', 'js/jquery.timeago.js', 'js/site.js'],
+     ['js/jquery-2.1.1.js',
+      'js/jquery.timeago.js',
+      'js/responsive-nav.js',
+      'js/site.js'],
      {'output': 'CACHE/base-js.%(version)s.js',
-      'filters': 'rjsmin,gzip'})
+      'filters': ['rjsmin']})
 )

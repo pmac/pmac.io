@@ -20,14 +20,14 @@
   </head>
   <body>
     {% if GITHUB_URL %}
-      <div class="github-fork-ribbon-wrapper right">
+      <div id="github-fork-ribbon" class="github-fork-ribbon-wrapper right">
         <div class="github-fork-ribbon">
           <a href="{{ GITHUB_URL }}">Fork me on GitHub <i class="icon-github"></i></a>
         </div>
       </div>
     {% endif %}
     <div class="wrapper">
-      <header>
+      <header class="nav-collapse">
         <div class="title"><a href="{{ SITEURL }}/">{{ SITENAME }} </a></div>
         <div class="sub-title">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
 

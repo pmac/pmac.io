@@ -1,4 +1,4 @@
-(function($) {
+(function($, respNav) {
   'use strict';
 
   var metas = document.getElementsByTagName('meta');
@@ -44,4 +44,5 @@
     $('time.timeago').timeago();
   });
 
-})(jQuery);
+  var nav = respNav('.nav-collapse');
+})(jQuery, responsiveNav);
