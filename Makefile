@@ -83,8 +83,8 @@ ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 upload: publish
-	s3cmd sync $(OUTPUTDIR)/theme/CACHE/ s3://$(S3_BUCKET)/theme/CACHE/ -M --acl-public --delete-removed --add-header="Cache-Control: max-age=315360000"
-	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) -M --cf-invalidate --cf-invalidate-default-index --acl-public --delete-removed --add-header="Cache-Control: max-age=7200"
+	s3cmd sync $(OUTPUTDIR)/theme/CACHE/ s3://$(S3_BUCKET)/theme/CACHE/ -M --acl-public --add-header="Cache-Control: max-age=315360000" --add-header="Content-Encoding: gzip"
+	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) -M --cf-invalidate --cf-invalidate-default-index --acl-public --delete-removed --add-header="Cache-Control: max-age=7200" --exclude="/theme/CACHE/*"
 
 github: publish
 	ghp-import $(OUTPUTDIR) -b master -m 'Update blog.'

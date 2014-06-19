@@ -65,9 +65,9 @@ ASSET_BUNDLES = (
      ['css/main.css', 'css/pygment.css', 'css/font-awesome.css',
       'css/gh-fork-ribbon.css'],
      {'output': 'CACHE/base-css.%(version)s.css',
-      'filters': 'cssmin'}),
+      'filters': 'cssmin,gzip'}),
     ('base-js',
      ['js/jquery-2.1.1.js', 'js/jquery.timeago.js', 'js/site.js'],
      {'output': 'CACHE/base-js.%(version)s.js',
-      'filters': 'rjsmin'})
+      'filters': 'rjsmin,gzip'})
 )
