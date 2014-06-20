@@ -8,5 +8,6 @@
     {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get
     the pdf</a>{% endif %}
     {{ page.content }}
+    {% include 'twitter.html' %}
 </section>
 {% endblock %}

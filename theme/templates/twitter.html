@@ -1,3 +1,7 @@
+{% set content = article or page %}
 {% if TWITTER_USERNAME %}
-  <a href="http://twitter.com/home?status=@{{ TWITTER_USERNAME }}" class="tweetme">respond on twitter <i class="icon-twitter"></i></a>
+  <a href="http://twitter.com/home?status=@{{ TWITTER_USERNAME }}" class="tweetme pull-right">respond on twitter <i class="icon-twitter"></i></a>
+{% endif %}
+{% if content.edit_url %}
+  <a class="editme" href="{{ content.edit_url }}">edit on github <i class="icon-github"></i></a>
 {% endif %}

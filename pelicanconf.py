@@ -19,6 +19,7 @@ PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = [
     'pelican_alias',
     'pelican_bugs',
+    'pelican_edit_url',
     'optimize_images',
     'assets',
 ]
@@ -30,6 +31,9 @@ FEED_ALL_ATOM = TRANSLATION_FEED_ATOM = None
 
 TWITTER_USERNAME = 'pmclanahan'
 GITHUB_URL = 'https://github.com/pmclanahan'
+GITHUB_REPO = 'pmac.io'
+GITHUB_REPO_URL = '{}/{}'.format(GITHUB_URL, GITHUB_REPO)
+EDIT_CONTENT_URL = GITHUB_REPO_URL + '/blob/master/{file_path}'
 SOCIAL = (
     ('github', GITHUB_URL),
     ('twitter', 'https://twitter.com/pmclanahan'),
