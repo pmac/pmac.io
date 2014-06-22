@@ -347,3 +347,7 @@ footer p {
     margin-bottom: 0;
     padding: 0;
 }
+
+.codehilite {
+    margin-bottom: 20px;
+}
