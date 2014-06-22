@@ -1,5 +1,5 @@
 title: Pythons, Pelicans, and Posts
-tags: python, blog, pelican, release
+tags: python, meta, pelican, release
 image: /images/pelicans.jpg
 image_alt: Pelicans!
 image_credit_url: http://www.flickr.com/photos/bertknot/8121224533
