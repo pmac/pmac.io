@@ -32,3 +32,9 @@ GOOGLE_ANALYTICS = "UA-170744-4"
 # add gzip
 for bundle in ASSET_BUNDLES:
     bundle[2]['filters'].append('better_gzip')
+
+# load extra config if available
+try:
+    from pelicanlocal import *
+except ImportError:
+    pass
