@@ -42,7 +42,7 @@
       return false;
     });
     $('time.timeago').timeago();
+    var nav = respNav('.nav-collapse');
   });
 
-  var nav = respNav('.nav-collapse');
 })(jQuery, responsiveNav);
