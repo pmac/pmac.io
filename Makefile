@@ -90,4 +90,14 @@ github: publish
 	ghp-import $(OUTPUTDIR) -b master -m 'Update blog.'
 	git push origin master
 
-.PHONY: html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload upload github compress_images
+install_things:
+	git submodule sync && git submodule update --init --recursive
+	bin/peep.py install -r requirements.txt
+
+current_hash:
+	git rev-parse HEAD > output/revision.txt
+
+install_deploy: install_things publish current_hash
+
+
+.PHONY: install_things current_hash install_deploy html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload upload github compress_images

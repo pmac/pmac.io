@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-oldrev=$1
-newrev=$2
-
-make publish
-
-echo "$newrev" > output/revision.txt
