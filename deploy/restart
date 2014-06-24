@@ -1,5 +1,5 @@
 #!/bin/sh
 touch tmp/restart.txt
-echo "restarting nginx"
+echo "reloading nginx config"
 
 sudo service nginx reload
