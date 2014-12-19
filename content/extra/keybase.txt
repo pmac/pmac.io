@@ -1,0 +1,74 @@
+https://keybase.io/pmac
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://pmac.io
+  * I am pmac (https://keybase.io/pmac) on keybase.
+  * I have a public key with fingerprint D089 7AA2 7F05 AC66 AECB  126B 210C EF9F E25F 97CC
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.3"
+        },
+        "key": {
+            "fingerprint": "d0897aa27f05ac66aecb126b210cef9fe25f97cc",
+            "host": "keybase.io",
+            "key_id": "210CEF9FE25F97CC",
+            "uid": "a32dbbca11ef3a6a9777b6494c704100",
+            "username": "pmac"
+        },
+        "merkle_root": {
+            "ctime": 1419021466,
+            "hash": "b8a0e096746beb3b3182342d7debf8c92e9569e8cf60e126175caadcd9a0f31086d2ece587504b604c6eaadf6abff0f26ba92b39f0932beb18525b806feefcf0",
+            "seqno": 113390
+        },
+        "service": {
+            "hostname": "pmac.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1419021578,
+    "expire_in": 157680000,
+    "prev": "1e31c6d3dcb9573e8854a0bece3587e487d9c14730f091cd078f74df9b130a70",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+
+owFVUm9oHEUUv0s00aMtQqEaTCWu2lZJ15md3Zmd9IO1MfkQaUMxVJCU68zsm9ym
+udt1bxM9z6BS2hLBJlSraAW1FGlEaEEqBoMQrYpWQ0Ww/VBrqJEQQUVEBf9UZ2OE
+dD7NvPd7v/f7vTcTqxtzDflbV/30yuXiC5/lzy7KXN9zzxTqloyCmtVRt9RQCJU0
+u1VEGawOay/UpKiCHUZtlSgAe7Datoxpt0YgqYZRxaCQzWxijbZn8KxYh5UBSOIk
+zLisAPmcCeEwjTyhKBWgJHaodDBSoLkGx9OcKWUoS1E1vaqrtcRZDAMTNfjOrm7e
+3eV43Zx1dprc8FJCECeQUgmMQRNBBWeMSepyVzHkYoQyYBWSZUtxWahMaxmSvUNQ
+TKJoybBKwyyNXcyRg11KjRpRLZkC6QsEiFPmUgmSSIJ9h7hOwAKQ2lfcAe5RDr7S
+FIExhpmnhAhUwAXSBCOfBg4o8HzmIVdS5CoKJq+pkFojbSYhuCMJ14gTx3TAvud4
+0kdUA2ilM/lVeLgSGXGYEI5Gs3cyEirIdGcjW+Hsv5nFSZRGKhoywVKaxh2Z37QW
+Z6BHQBaXy4vyeFgJzK5WLhMb6NWz8JjfbsGjcZhAMcwQHqM+MifrAyOGEwPBigYk
+UJJ7jIDve65A0pgmxjW4Pgu4wi4jyHjEKkDM18wNNJeYIMFWODSdUjFgKKvhQEWk
+wwlYo2P51mty+YZc07UN2W/NFa6/4f8vjPuar9jrJtds7a2dvGnwzMRiy/kx+KN/
+Lpy9d2PjYFe8fup009TOA++MP709fvKu+y9tcNZ/0tqiTjWfLWyZsf8cO/Sl/dDP
+/atefKx37fev7zi3e+r4kVqp/8H5j/bLgxvvG44vrpn57usT9tFL7Wd2XTcwqy4M
+ssX66I9vr30Cyb7JE8c+nNvXtG531+HyF//cs+Pbm93xXFrY8nfPnaej1p6/1PY3
+p1u2uQsL/KuJx8ebn39/9cGXDz9wd9vcB0d06/Qd237Xz269cmEP3Xd776sb6tOF
+N/aX0MItR39498bL85ONL+05Of/LUx83Hnrttk2bOpudmfdmv/nUOd92rnzsYv3z
+t/p+/W2zvbPnQH7zvw==
+=xanX
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pmac

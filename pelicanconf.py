@@ -43,6 +43,14 @@ TEMPLATE_PAGES = {
     'extra/404.html': '404.html',
 }
 
+STATIC_PATHS = [
+    'extra/keybase.txt',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/keybase.txt': {'path': 'keybase.txt'},
+}
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
