@@ -40,7 +40,7 @@ changes made to do the things mentioned above. Feel free to check our work and [
 been silly in our haste.
 
 > <pre>
-> (bedrock) ± git log --no-merges --since=2015-01-01 --pretty=format:"%h - %ad - %an - %s" --date=short
+> (bedrock) ± [git log --no-merges --since=2015-01-01 --pretty=format:"%h - %ad - %an - %s" --date=short](https://github.com/mozilla/bedrock/compare/1872bd7...2c5e49c)
 > [2c5e49c](https://github.com/mozilla/bedrock/commit/2c5e49c) - 2015-02-02 - Bansal Utkarsh - Fixes Bug 1062441 - Add anchors
 > [25a8afa](https://github.com/mozilla/bedrock/commit/25a8afa) - 2015-02-02 - Francesco Lodolo (:flod) - Bug 1115066 - Add more locales to Thunderbird start page redirect
 > [158cd6c](https://github.com/mozilla/bedrock/commit/158cd6c) - 2015-01-30 - Gervase Markham - Scope CSS to avoid adding number to mozilla header.
