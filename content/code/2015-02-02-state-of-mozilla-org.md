@@ -128,7 +128,7 @@ If you've read this far, **THANKS!** We really appreciate the interest.
 If you see an issue with this page or site in general click the
 edit button below. If you see a problem or have a suggestion for
 mozilla.org please [file a bug][]. If you have some reason for wanting
-to avoid bugzilla, also feel free to tweet at me (links around) and
+to avoid bugzilla just tweet at me (links around) and
 I'm happy to file the bug.
 
 Cheers!
