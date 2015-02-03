@@ -18,7 +18,7 @@ A lot has been happening on the backend. We're in the process of upgrading Pytho
 the dev and demo servers have already been done (HOORAY! Thanks [jakem][]!).
 We've also [upgraded Django to the 1.6 branch][django-1.6] (though this was a bit more than 2 weeks ago.
 Once Python 2.7 fully lands we'll start the move to Django 1.7 and all it's sweet, sweet improvements.
-I've made a [google doc of the process][bedrock-doc] that I'm continuing to tweak. Feedback welcome of course :)
+I've made a [wiki page of the process][bedrock-doc] that I'm continuing to tweak. Feedback welcome of course :)
 
 On the frontend we launched the [CES landing page][fxos-tv] about the FxOS powered TVs (DO WANT!),
 and we built and launched the [Firefox Hello First-Time-Experience][fx-hello] page. These major
@@ -135,7 +135,7 @@ Cheers!
 
 [input]: http://bluesock.org/~willkg/blog/mozilla/input_status_20141218.html
 [jakem]: https://github.com/superawesome
-[bedrock-doc]: https://docs.google.com/document/d/1UFMW8DZVPgLPGyoZY9JbW7VOvBAUjrSAE4hiCJ84OvA/edit?usp=sharing
+[bedrock-doc]: https://wiki.mozilla.org/Websites/Mozilla.org/Static-Media-Improvements
 [django-1.6]: https://github.com/mozilla/bedrock/pull/2635
 [fxos-tv]: https://www.mozilla.org/firefox/os/devices/tv/
 [fx-hello]: https://www.mozilla.org/firefox/hello/
