@@ -351,3 +351,10 @@ footer p {
 .codehilite {
     margin: 0 5px 20px 5px;
 }
+
+.git-log {
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+}
