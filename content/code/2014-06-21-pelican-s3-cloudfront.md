@@ -9,7 +9,7 @@ domain (i.e. without the "www."). I finally found a nice short domain that I lik
 to have to shove anything else on the front of it. But if you use an apex domain with github pages it is
 [painfully slow](http://instantclick.io/github-pages-and-apex-domains).
 
-So... what to do? Use Amazon S3 of course! I found an [excellent blog post](http://sylvain.durand.tf/static-website-with-cloudfront/) on how best to accomplish it,
+So... what to do? Use Amazon S3 of course! I found an [excellent blog post](http://sylvaindurand.org/website-delivery-with-cloudfront/) on how best to accomplish it,
 but it was specific to Jekyll so I still had to do some more setup. So I thought I'd make notes about those changes here so I'll remember
 and hopefully help some other poor micro-optimizing soul out there.
 
