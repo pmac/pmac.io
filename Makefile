@@ -7,6 +7,7 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+DOCKER_OUT=/usr/share/nginx/html
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -50,7 +51,7 @@ $(OUTPUTDIR)/%.html:
 clean:
 	[ ! -d $(OUTPUTDIR) ] || find $(OUTPUTDIR) -mindepth 1 -delete
 
-debug: 
+debug:
 	$(PELICAN) -D $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 regenerate: clean
@@ -69,6 +70,9 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+
+docker:
+	$(PELICAN) $(INPUTDIR) -o $(DOCKER_OUT) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -100,4 +104,4 @@ current_hash:
 install_deploy: install_things publish current_hash
 
 
-.PHONY: install_things current_hash install_deploy html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload upload github compress_images
+.PHONY: docker install_things current_hash install_deploy html help clean debug regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload upload github compress_images
