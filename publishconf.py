@@ -13,7 +13,7 @@ from pelicanconf import *
 
 
 PLUGINS.append('gzip_cache')
-SITEURL = 'http://pmac.io'
+SITEURL = os.getenv('PELICAN_SITEURL', 'http://pmac.io')
 RELATIVE_URLS = False
 
 FEED_DOMAIN = SITEURL
