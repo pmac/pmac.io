@@ -15,7 +15,7 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
-PLUGIN_PATH = 'pelican-plugins'
+PLUGIN_PATH = 'contrib'
 PLUGINS = [
     'pelican_alias',
     'pelican_bugs',
