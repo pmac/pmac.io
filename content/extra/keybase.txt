@@ -3,72 +3,50 @@ https://keybase.io/pmac
 
 I hereby claim:
 
-  * I am an admin of http://pmac.io
+  * I am an admin of https://pmac.io
   * I am pmac (https://keybase.io/pmac) on keybase.
-  * I have a public key with fingerprint D089 7AA2 7F05 AC66 AECB  126B 210C EF9F E25F 97CC
+  * I have a public key ASBr9T1oubI_25zmH46xw03Bhp94xd10XQ35THyA_1BW6Qo
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.7.3"
-        },
         "key": {
-            "fingerprint": "d0897aa27f05ac66aecb126b210cef9fe25f97cc",
+            "eldest_kid": "0101e714f742ae7165920baed4b76d7263cc4b38a78ce671b3a9a45d63c028d223b00a",
             "host": "keybase.io",
-            "key_id": "210CEF9FE25F97CC",
+            "kid": "01206bf53d68b9b23fdb9ce61f8eb1c34dc1869f78c5dd745d0df94c7c80ff5056e90a",
             "uid": "a32dbbca11ef3a6a9777b6494c704100",
             "username": "pmac"
         },
-        "merkle_root": {
-            "ctime": 1419021466,
-            "hash": "b8a0e096746beb3b3182342d7debf8c92e9569e8cf60e126175caadcd9a0f31086d2ece587504b604c6eaadf6abff0f26ba92b39f0932beb18525b806feefcf0",
-            "seqno": 113390
-        },
         "service": {
             "hostname": "pmac.io",
-            "protocol": "http:"
+            "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1419021578,
-    "expire_in": 157680000,
-    "prev": "1e31c6d3dcb9573e8854a0bece3587e487d9c14730f091cd078f74df9b130a70",
-    "seqno": 8,
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1467900295,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1467900254,
+        "hash": "feabd1e35f347a7947d8578f412b34e3c18734f025e97184263160d176104b40a36d5b6d1b7c6915467ad041b77527a53ad72c972c64526bdb5e384070994edd",
+        "seqno": 512291
+    },
+    "prev": "e73043015f744bbbbd1f54f988e4d421f08ed922fbccb40e82db93e368e077ff",
+    "seqno": 43,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
-Comment: GPGTools - http://gpgtools.org
-
-owFVUm9oHEUUv0s00aMtQqEaTCWu2lZJ15md3Zmd9IO1MfkQaUMxVJCU68zsm9ym
-udt1bxM9z6BS2hLBJlSraAW1FGlEaEEqBoMQrYpWQ0Ww/VBrqJEQQUVEBf9UZ2OE
-dD7NvPd7v/f7vTcTqxtzDflbV/30yuXiC5/lzy7KXN9zzxTqloyCmtVRt9RQCJU0
-u1VEGawOay/UpKiCHUZtlSgAe7Datoxpt0YgqYZRxaCQzWxijbZn8KxYh5UBSOIk
-zLisAPmcCeEwjTyhKBWgJHaodDBSoLkGx9OcKWUoS1E1vaqrtcRZDAMTNfjOrm7e
-3eV43Zx1dprc8FJCECeQUgmMQRNBBWeMSepyVzHkYoQyYBWSZUtxWahMaxmSvUNQ
-TKJoybBKwyyNXcyRg11KjRpRLZkC6QsEiFPmUgmSSIJ9h7hOwAKQ2lfcAe5RDr7S
-FIExhpmnhAhUwAXSBCOfBg4o8HzmIVdS5CoKJq+pkFojbSYhuCMJ14gTx3TAvud4
-0kdUA2ilM/lVeLgSGXGYEI5Gs3cyEirIdGcjW+Hsv5nFSZRGKhoywVKaxh2Z37QW
-Z6BHQBaXy4vyeFgJzK5WLhMb6NWz8JjfbsGjcZhAMcwQHqM+MifrAyOGEwPBigYk
-UJJ7jIDve65A0pgmxjW4Pgu4wi4jyHjEKkDM18wNNJeYIMFWODSdUjFgKKvhQEWk
-wwlYo2P51mty+YZc07UN2W/NFa6/4f8vjPuar9jrJtds7a2dvGnwzMRiy/kx+KN/
-Lpy9d2PjYFe8fup009TOA++MP709fvKu+y9tcNZ/0tqiTjWfLWyZsf8cO/Sl/dDP
-/atefKx37fev7zi3e+r4kVqp/8H5j/bLgxvvG44vrpn57usT9tFL7Wd2XTcwqy4M
-ssX66I9vr30Cyb7JE8c+nNvXtG531+HyF//cs+Pbm93xXFrY8nfPnaej1p6/1PY3
-p1u2uQsL/KuJx8ebn39/9cGXDz9wd9vcB0d06/Qd237Xz269cmEP3Xd776sb6tOF
-N/aX0MItR39498bL85ONL+05Of/LUx83Hnrttk2bOpudmfdmv/nUOd92rnzsYv3z
-t/p+/W2zvbPnQH7zvw==
-=xanX
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEga/U9aLmyP9uc5h+OscNNwYafeMXddF0N+Ux8gP9QVukKp3BheWxvYWTFAux7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZTcxNGY3NDJhZTcxNjU5MjBiYWVkNGI3NmQ3MjYzY2M0YjM4YTc4Y2U2NzFiM2E5YTQ1ZDYzYzAyOGQyMjNiMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNmJmNTNkNjhiOWIyM2ZkYjljZTYxZjhlYjFjMzRkYzE4NjlmNzhjNWRkNzQ1ZDBkZjk0YzdjODBmZjUwNTZlOTBhIiwidWlkIjoiYTMyZGJiY2ExMWVmM2E2YTk3NzdiNjQ5NGM3MDQxMDAiLCJ1c2VybmFtZSI6InBtYWMifSwic2VydmljZSI6eyJob3N0bmFtZSI6InBtYWMuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNiJ9LCJjdGltZSI6MTQ2NzkwMDI5NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDY3OTAwMjU0LCJoYXNoIjoiZmVhYmQxZTM1ZjM0N2E3OTQ3ZDg1NzhmNDEyYjM0ZTNjMTg3MzRmMDI1ZTk3MTg0MjYzMTYwZDE3NjEwNGI0MGEzNmQ1YjZkMWI3YzY5MTU0NjdhZDA0MWI3NzUyN2E1M2FkNzJjOTcyYzY0NTI2YmRiNWUzODQwNzA5OTRlZGQiLCJzZXFubyI6NTEyMjkxfSwicHJldiI6ImU3MzA0MzAxNWY3NDRiYmJiZDFmNTRmOTg4ZTRkNDIxZjA4ZWQ5MjJmYmNjYjQwZTgyZGI5M2UzNjhlMDc3ZmYiLCJzZXFubyI6NDMsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAKY4HtfU+fqxz5izDQza9Tizb68U8NsndWomiUTjlnwDUUOhKtOdizT0+u2Zq7hqz0Wizso6WdXfFdVYk+WH6BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEltye/p7rv+Th6ykwIvUSN94th8zM7naFlk88SKloEno3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
 View my publicly-auditable identity here: https://keybase.io/pmac
+
