@@ -1,0 +1,22 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <p class="lead">{{ .Site.Params.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="{{ .Site.BaseURL }}">Home</a>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main -}}
+      <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}"> {{ .Name }} </a>
+      {{- end }}
+    </nav>
+
+    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+    {{ if .File.Path -}}
+    <a class="sidebar-nav-item" href="{{.Site.Params.ghRepo}}blob/master/content/{{.File.Path}}">Improve this page</a>
+    {{- end }}
+    <a class="sidebar-nav-item" href="https://twitter.com/intent/tweet?text=%40pmclanahan&source=webclient">Respond via Twitter</a>
+  </div>
+</div>

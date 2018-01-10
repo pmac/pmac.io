@@ -1,0 +1,23 @@
+{{ define "main" -}}
+<div class="post">
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.tags -}}
+  <div class="post-meta">
+    <p class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+    <ul class="post-tags">
+      {{ range .Params.tags }}
+      <li>
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end -}}
+  {{ .Content }}
+</div>
+
+{{ if .Site.DisqusShortname -}}
+<h2>Comments</h2>
+{{ template "_internal/disqus.html" . }}
+{{- end }}
+{{- end }}
