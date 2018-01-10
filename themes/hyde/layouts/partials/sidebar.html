@@ -1,12 +1,12 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <a href="/"><h1>{{ .Site.Title }}</h1></a>
       <p class="lead">{{ .Site.Params.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="{{ .Site.BaseURL }}">Home</a>
+      <a class="sidebar-nav-item" href="/">Home</a>
       {{ $currentPage := . }}
       {{ range .Site.Menus.main -}}
       <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}"> {{ .Name }} </a>
