@@ -13,6 +13,12 @@
       {{- end }}
     </nav>
 
+    <div class="sidebar-social">
+      <a href="https://twitter.com/pmclanahan" aria-label="Twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a href="https://github.com/pmac" aria-label="Github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+      <a href="https://mozillians.org/en-US/u/pmac/" aria-label="Mozillians.org"><i class="fa fa-firefox fa-2x" aria-hidden="true"></i></a>
+    </div>
+
     <p>
       <small>&copy; {{ now.Format "2006"}} Paul McLanahan
         <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
@@ -21,8 +27,6 @@
       </small>
     </p>
     {{ if .File.Path -}}
-    <a class="sidebar-nav-item" href="{{.Site.Params.ghRepo}}blob/master/content/{{.File.Path}}">Improve this page</a>
     {{- end }}
-    <a class="sidebar-nav-item" href="https://twitter.com/intent/tweet?text=%40pmclanahan&source=webclient">Respond via Twitter</a>
   </div>
 </div>

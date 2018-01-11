@@ -101,6 +101,16 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+.sidebar-social {
+    margin-top: 1rem;
+}
+.sidebar-social a,
+.sidebar-social a:active,
+.sidebar-social a:hover {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
