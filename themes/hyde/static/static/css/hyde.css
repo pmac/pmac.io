@@ -84,6 +84,22 @@ html {
 }
 
 /* Sidebar nav */
+@keyframes sidebar-social-hover {
+	from {
+    color: rgba(255,255,255,.5);
+  }
+	to {
+    color: white;
+  }
+}
+@keyframes sidebar-social-out {
+	from {
+    color: white;
+  }
+	to {
+    color: rgba(255,255,255,.5);
+  }
+}
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
@@ -99,16 +115,22 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+  background-color: rgba(255,255,255,.1);
 }
 
 .sidebar-social {
     margin-top: 1rem;
 }
-.sidebar-social a,
-.sidebar-social a:active,
-.sidebar-social a:hover {
+.sidebar-social a {
+  animation: sidebar-social-out .2s;
   text-decoration: none;
   margin-right: 1rem;
+  color: rgba(255,255,255,.5);
+}
+.sidebar-social a:active,
+.sidebar-social a:hover {
+  animation: sidebar-social-hover .2s;
+  color: white;
 }
 
 /* Sticky sidebar
