@@ -1,7 +1,7 @@
 ---
 title: The State of Mozilla.org - February 2015
 date: 2015-03-03
-tags: 
+tags:
   - mozilla
   - bedrock
   - sumo
@@ -49,8 +49,7 @@ Thank you all for your contributions to bedrock and the Open Web **\o/**
 [Schalk Neethling]: https://github.com/schalkneethling
 
 ## [Git Log for February](https://github.com/mozilla/bedrock/compare/8547262...c0dfdee)
-
-<div class="git-log" markdown="1">
+<code><pre class="expand">
 * 8547262 (Pascal Chevrel) Bug 1128957 - Fix block parsing errors in jinja templates
 * bb8aa7a (Kohei Yoshino) Fix Bug 1129130 - Hyperlinking bios to Steering Committee page
 * f67af74 (Kohei Yoshino) Fix Bug 1129214 - Please add Rust and Cargo to our trademark list
@@ -172,4 +171,4 @@ Thank you all for your contributions to bedrock and the Open Web **\o/**
 * c0066c1 (Craig Cook) Fix bug 1138169 - MWC partner logo updates
 * 90bec7a (Francesco Lodolo (:flod)) Bug 1120700 - Fx OS consumer page: restore page title on old template
 * c0dfdee (Steven Garrity) Bug 1137347 Replace temporary MWC logos
-</div>
+</pre></code>
