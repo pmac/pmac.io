@@ -85,18 +85,18 @@ html {
 
 /* Sidebar nav */
 @keyframes sidebar-social-hover {
-	from {
+  from {
     color: rgba(255,255,255,.5);
   }
-	to {
+  to {
     color: white;
   }
 }
 @keyframes sidebar-social-out {
-	from {
+  from {
     color: white;
   }
-	to {
+  to {
     color: rgba(255,255,255,.5);
   }
 }
