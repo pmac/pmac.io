@@ -26,7 +26,8 @@ pygmentsStyle = "friendly"
 
 [outputs]
   home = ["HTML", "RSS", "REDIR"]
-  section = [ "HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
 
 [mediaTypes."text/netlify"]
   suffix = ""
