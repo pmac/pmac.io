@@ -4,4 +4,7 @@
 {{ range .Aliases }}
 {{ . | printf "%-35s" }} {{ $p.RelPermalink -}}
 {{ end -}}
-{{- end -}}
+{{- end }}
+
+/feed.xml /index.xml
+/tag/:tag/feed.xml /tags/:tag/index.xml
