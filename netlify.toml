@@ -9,9 +9,12 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.32.3"
+  HUGO_BUILDDRAFTS = "true"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.32.3"
+  HUGO_BUILDDRAFTS = "true"
 
 [context.stage.environment]
   HUGO_ENABLEGITINFO = "true"
+  HUGO_BUILDDRAFTS = "true"
