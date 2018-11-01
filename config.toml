@@ -31,7 +31,7 @@ pygmentsStyle = "friendly"
   taxonomy = ["HTML", "RSS"]
 
 [mediaTypes."text/netlify"]
-  suffix = ""
+  suffixes = [""]
   delimiter = ""
 
 [outputFormats.REDIR]
