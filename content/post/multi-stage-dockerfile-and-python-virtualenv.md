@@ -34,6 +34,9 @@ a second section based on a Python image you build your app and copy the assets
 from the first stage. Here's a simple example:
 
 ```docker
+########
+# assets builder and dev server
+#
 FROM node:8 AS assets
 
 # Add node tools to path
@@ -81,6 +84,9 @@ WORKDIR /app
 ENV LANG=C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+
+# This line ensures that the python and pip executables used
+# in the image will be those from our virtualenv.
 ENV PATH="/venv/bin:$PATH"
 
 # do all of this in one RUN to limit final image size
@@ -90,11 +96,13 @@ RUN apt-get update && \
         libxml2-dev libxslt1-dev libxslt1.1 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN virtualenv /venv
+# Setup the virtualenv
+RUN python -m venv /venv
+
 COPY requirements.txt ./
 
 # Install Python deps
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 ```
 
 And then the production app image:
@@ -103,16 +111,13 @@ And then the production app image:
 ########
 # django app container
 #
-FROM python:3-slim-stretch AS app-base
+FROM python:3-slim-stretch AS app
 
 # Extra python env
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV PATH="/venv/bin:$PATH"
-
-# add non-priviledged user
-RUN adduser --uid 1000 --disabled-password --gecos '' --no-create-home webdev
 
 WORKDIR /app
 EXPOSE 8000
@@ -126,6 +131,7 @@ RUN apt-get update && \
 
 # copy in Python environment
 COPY --from=builder /venv /venv
+
 # copy in static assets
 COPY --from=assets /app/static_final /app/static_final
 
