@@ -7,6 +7,8 @@ draft: true
 Using Docker's [multi-stage build][] feature and Python's virtualenv tool,
 we can make smaller and more secure docker images for production.
 
+<!--more-->
+
 ## The Problem
 
 We want to have the smallest production Docker images for a number of reasons.
