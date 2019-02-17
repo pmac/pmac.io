@@ -25,13 +25,16 @@ To accomplish this we used to have several docker files and we'd build them
 one at a time. We'd then either copy the built files out of them, or mount
 a volume and run the process that produced the files we needed then. But this
 was cumbersome and could potentially conflict with other builds on the same CI
-box if we weren't careful, so a single build process was very intersting.
+box if we weren't careful. This technique, dubbed the
+"[Builder Pattern][builder-pattern]", did work well for a time, but when
+we saw the ability to get the same benefit in a single build step we
+jumped at the chance.
 
 ## Multi-stage Dockerfile
 
-Enter a potential solution from Docker. A multi-stage Dockerfile is basically
-more than one Dockerfile glued together, i.e. it has more than one `FROM` line.
-The resulting image is the result of the last section in the file. So, for
+A multi-stage Dockerfile is one that is basically more than one Dockerfile
+glued together, i.e. it has more than one `FROM` line.
+The resulting image is defined in the last section in the file. So, for
 example, you could base the first section of the file on a NodeJS base, and in
 there have it build and process your static assets (CSS, JS, images), then in
 a second section based on a Python image you build your app and copy the assets
@@ -64,20 +67,23 @@ RUN gulp build --production
 
 The above results in processed files in an `static_final` directory in
 the image. Another section can get those files with a directive like
-`COPY --from=assets /app/static_final /app/static_final`.
+`COPY --from=assets /app/static_final /app/static_final` (see below).
 
 [multi-stage build]: https://docs.docker.com/develop/develop-images/multistage-build/
+[builder-pattern]: https://alexei-led.github.io/post/docker_builder_pattern/
 
 ## Python Virtualenv
 
 Normally in a Docker image a virtualenv is superfluous. You can just install
 your Python dependencies globally in the image and it won't interfere with a
-thing. Yay Docker! But the multistage-dockerfile (or just using multiple
+thing (Yay Docker!). But the multi-stage dockerfile (or just using multiple
 dockerfiles before this feature) introduces a reason to use
 them again. We can use a larger image with a lot of build tools and dependencies
-to compile and install all of our dependencies in a virtualenv, and then
+to compile and install all of our packages in a virtualenv, and then
 (as long as you keep it at the same path and on the same base distro) copy
-it to a much leaner and more secure production image.
+it to a much leaner and more secure production image. We'd used this builder
+technique for static assets for a while as mentioned above, but using it
+for the Python environment I thought was a stroke of genius.
 
 This is a technique I learned from my friend and colleague
 [Giorgos](https://giorgos.sealabs.net/) in his work on
@@ -95,9 +101,9 @@ FROM python:3-stretch AS builder
 
 # Always set a working directory
 WORKDIR /app
-# Sets utf-8 encoding for Python
+# Sets utf-8 encoding for Python et al
 ENV LANG=C.UTF-8
-# Turns off writing .pyc files. Superfluous on an ephemeral container.
+# Turns off writing .pyc files; superfluous on an ephemeral container.
 ENV PYTHONDONTWRITEBYTECODE=1
 # Seems to speed things up
 ENV PYTHONUNBUFFERED=1
