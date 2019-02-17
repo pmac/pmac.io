@@ -168,7 +168,7 @@ for descriptions of the image types if you're curious. I highly recommend
 the official Python images. They are well maintained and always have the latest
 Python versions.
 
-## Conclusion
+## Wrapping up
 
 I really like this technique. You get the benefit of a single Dockerfile with
 the full build encapsulated into one file and happening in one command, wile
@@ -176,9 +176,19 @@ also producting a much smaller and more secure image. I've thrown together a
 quick [demo Responder app repo][responder-demo] so that you can see how it all really works
 and fits together, and because I wanted an excuse to play with [Responder][] :)
 
-I hope you found this helpful. Thanks for reading!
+I also included in the demo, simple as it is, an [example Dockerfile][dockerfile-full]
+of the same commands but just using one build stage. The results of building these are:
 
+```bash
+$ docker images | grep multi-stage
+multi-stage-docker-venv-demo_app         latest  a6106f3a4c59  195MB
+multi-stage-docker-venv-demo_app-pipenv  latest  e945e860ec24  216MB
+multi-stage-docker-venv-demo_app-full    latest  e945e860ec24  979MB
+```
+
+I hope you found this helpful. Thanks for reading!
 
 [docker-hub-py]: https://hub.docker.com/_/python/#image-variants
 [responder-demo]: https://github.com/pmac/multi-stage-docker-venv-demo
 [Responder]: https://python-responder.org/
+[dockerfile-full]: https://github.com/pmac/multi-stage-docker-venv-demo/blob/master/Dockerfile-full
