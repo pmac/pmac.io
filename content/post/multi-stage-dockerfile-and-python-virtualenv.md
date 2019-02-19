@@ -1,7 +1,6 @@
 ---
 title: "Multi-Stage Dockerfiles and Python Virtualenvs"
-date: 2019-02-12T22:22:20-05:00
-draft: true
+date: 2019-02-18T20:22:20-05:00
 tags:
   - mozilla
   - docker
@@ -23,20 +22,20 @@ or libraries required to build the app in the final image if we can help it.
 
 To accomplish this we used to have several docker files and we'd build them
 one at a time. We'd then either copy the built files out of them, or mount
-a volume and run the process that produced the files we needed then. But this
-was cumbersome and could potentially conflict with other builds on the same CI
+a volume and run the process that produced the files we needed. This
+was cumbersome however, and could potentially conflict with other builds on the same CI
 box if we weren't careful. This technique, dubbed the
 "[Builder Pattern][builder-pattern]", did work well for a time, but when
 we saw the ability to get the same benefit in a single build step we
 jumped at the chance.
 
-## Multi-stage Dockerfile
+## Multi-Stage Dockerfile
 
 A multi-stage Dockerfile is one that is basically more than one Dockerfile
-glued together, i.e. it has more than one `FROM` line.
+glued together; i.e. it has more than one `FROM` line.
 The resulting image is defined in the last section in the file. So, for
-example, you could base the first section of the file on a NodeJS base, and in
-there have it build and process your static assets (CSS, JS, images), then in
+example, you could base the first section of the file on a NodeJS base image, and in
+there have it build and process your static assets (CSS, JS, images). Then in
 a second section based on a Python image you build your app and copy the assets
 from the first stage. Here's a simple example:
 
@@ -85,7 +84,7 @@ it to a much leaner and more secure production image. We'd used this builder
 technique for static assets for a while as mentioned above, but using it
 for the Python environment I thought was a stroke of genius.
 
-This is a technique I learned from my friend and colleague
+> This is a technique I learned from my friend and colleague
 [Giorgos](https://giorgos.sealabs.net/) in his work on
 [SUMO](https://github.com/mozilla/kitsune/ "Mozilla's Support Site") at Mozilla.
 He is awesome and you should check out his stuff.
@@ -164,23 +163,27 @@ COPY --from=assets /app/static_final /app/static_final
 COPY ./ ./
 ```
 
-The final Dockerfile is just these three sections concatinateed together.
-This ensures that the final image has no extra build tools, language runtimes
-(Node in this case), or libraries required only during build. The end result is
-a smaller and more secure container running your service.
+You could just copy the entire Python environment from one to the other,
+but that is a lot more to copy (includes the stdlib) and in my opinion
+more cumbersome. A virtualenv is an already convenient and portable
+Python environment.
 
-See the [official Python docker image repository][docker-hub-py]
+The final Dockerfile is just the three above sections concatinateed together.
+The final image has no extra build tools, language runtimes
+(Node in this case), or libraries required only during build. In the end the container running your service is much smaller and more secure.
+
+> See the [official Python docker image repository][docker-hub-py]
 for descriptions of the image types if you're curious. I highly recommend
 the official Python images. They are well maintained and always have the latest
 Python versions.
 
-## Wrapping up
+## Wrapping Up
 
 I really like this technique. You get the benefit of a single Dockerfile with
-the full build encapsulated into one file and happening in one command, wile
+the full build encapsulated into a single file, while
 also producting a much smaller and more secure image. I've thrown together a
-quick [demo Responder app repo][responder-demo] so that you can see how it all really works
-and fits together, and because I wanted an excuse to play with [Responder][] :)
+quick [demo app repo][responder-demo] so that you can see it all really work
+and fit together, and because I wanted an excuse to play with [Responder][] :)
 
 I also included in the demo, simple as it is, an [example Dockerfile][dockerfile-full]
 of the same commands but just using one build stage. The results of building these are:
