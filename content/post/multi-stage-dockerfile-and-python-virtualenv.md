@@ -168,7 +168,7 @@ but that is a lot more to copy (includes the stdlib) and in my opinion
 more cumbersome. A virtualenv is an already convenient and portable
 Python environment.
 
-The final Dockerfile is just the three above sections concatinateed together.
+The final Dockerfile is just the three above sections concatenated together.
 The final image has no extra build tools, language runtimes
 (Node in this case), or libraries required only during build. In the end the container running your service is much smaller and more secure.
 
@@ -181,7 +181,7 @@ Python versions.
 
 I really like this technique. You get the benefit of a single Dockerfile with
 the full build encapsulated into a single file, while
-also producting a much smaller and more secure image. I've thrown together a
+also producing a much smaller and more secure image. I've thrown together a
 quick [demo app repo][responder-demo] so that you can see it all really work
 and fit together, and because I wanted an excuse to play with [Responder][] :)
 
