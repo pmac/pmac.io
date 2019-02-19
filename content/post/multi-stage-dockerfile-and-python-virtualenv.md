@@ -16,7 +16,7 @@ we can make smaller and more secure docker images for production.
 
 We want to have the smallest production Docker images for a number of reasons.
 Having files unnecessary to the running app makes the image slower to move
-to and from the Docker Hub, as well as potentially introducting security
+to and from the Docker Hub, as well as potentially introducing security
 vulnerabilities. So we'd really prefer not to have any of the build tools
 or libraries required to build the app in the final image if we can help it.
 
