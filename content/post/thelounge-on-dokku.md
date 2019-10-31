@@ -9,7 +9,11 @@ tags:
   - dokku
 ---
 
-Mozilla has hosted an enterprise instance of [IRCCloud][] for several years now, and it's been a great client to use with our IRC network. IRCCloud has deprecated their enterprise product and so Mozilla recently decommissioned our instance. I then saw several colleagues praising [The Lounge][] as a good self-hosted alternative. I became even more interested when I saw that the project maintains a [docker image distribution][] of their releases. I now have an instance running and I'm using irc.mozilla.org via this client and I agree with my colleagues: it's a decent replacement. I'm running this on a [Linode][] I have that I use for some personal projects via [Dokku][], complete with an SSL cert from Let's Encrypt! For those interested in replicating this setup, here's what I did:
+Mozilla has hosted an enterprise instance of [IRCCloud][] for several years now, and it's been a great client to use with our IRC network. IRCCloud has deprecated their enterprise product and so Mozilla recently decommissioned our instance. I then saw several colleagues praising [The Lounge][] as a good self-hosted alternative. I became even more interested when I saw that the project maintains a [docker image distribution][] of their releases. I now have an instance running and I'm using irc.mozilla.org via this client and I agree with my colleagues: it's a decent replacement.
+
+<!--more-->
+
+I'm running this on a [Linode][] I have that I use for some personal projects via [Dokku][], complete with an SSL cert from Let's Encrypt! For those interested in replicating this setup, here's what I did:
 
 ## Dokku
 
