@@ -9,11 +9,12 @@ type: page
            alt="Challenge coin. Mozilla dino in center." >}}
 
 I wanted to make these mainly because I wanted one. My wife is a commissioned officer in the
-[Public Health Service Commissioned Corps][phs] of the United States, and they
-have a long tradition of making and using [challenge coins][coins] for esprit de corps and honoring those
-who've done great work for the corps or the team. I've been at Mozilla for long enough now that I
-really wanted to do something to show my appreciation for so many amazing people with whom I've
-had the honor to work, and to just bring a (hopefully) cool new Mozillian thing into the world.
+United States [Public Health Service Commissioned Corps][phs], and they
+have a long tradition of making and using [challenge coins][coins] for honoring those
+who've made great contributions to the corps, the team, and the health of the country.
+I've been at Mozilla for long enough now that I wanted to do something to show my appreciation
+for so many amazing people with whom I've had the honor to work, and just to bring a (hopefully)
+cool new Mozillian thing into the world.
 
 {{< figure src="/static/post/firefox-coin.png"
            height="250"
