@@ -1,23 +1,23 @@
 {
-    "subject": "acct:pmac@mozilla.social",
+    "subject": "acct:pmac@fosstodon.org",
     "aliases": [
-        "https://mozilla.social/@pmac",
-        "https://mozilla.social/users/pmac"
+        "https://fosstodon.org/@pmac",
+        "https://fosstodon.org/users/pmac"
     ],
     "links": [
         {
             "rel": "http://webfinger.net/rel/profile-page",
             "type": "text/html",
-            "href": "https://mozilla.social/@pmac"
+            "href": "https://fosstodon.org/@pmac"
         },
         {
             "rel": "self",
             "type": "application/activity+json",
-            "href": "https://mozilla.social/users/pmac"
+            "href": "https://fosstodon.org/users/pmac"
         },
         {
             "rel": "http://ostatus.org/schema/1.0/subscribe",
-            "template": "https://mozilla.social/authorize_interaction?uri={uri}"
+            "template": "https://fosstodon.org/authorize_interaction?uri={uri}"
         }
     ]
 }
